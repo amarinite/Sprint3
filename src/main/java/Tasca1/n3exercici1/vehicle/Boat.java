@@ -1,4 +1,4 @@
-package Tasca1.n1exercici3.vehicle;
+package Tasca1.n3exercici1.vehicle;
 
 public class Boat implements Vehicle{
     @Override

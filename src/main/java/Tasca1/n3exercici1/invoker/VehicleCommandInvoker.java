@@ -1,6 +1,6 @@
-package Tasca1.n1exercici3.invoker;
+package Tasca1.n3exercici1.invoker;
 
-import Tasca1.n1exercici3.commands.VehicleCommand;
+import Tasca1.n3exercici1.commands.VehicleCommand;
 
 import java.util.ArrayList;
 import java.util.List;

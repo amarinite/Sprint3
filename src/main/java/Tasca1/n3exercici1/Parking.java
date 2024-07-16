@@ -1,10 +1,10 @@
-package Tasca1.n1exercici3;
+package Tasca1.n3exercici1;
 
-import Tasca1.n1exercici3.commands.AccelarateVehicleCommand;
-import Tasca1.n1exercici3.commands.BrakeVehicleCommand;
-import Tasca1.n1exercici3.commands.StartVehicleCommand;
-import Tasca1.n1exercici3.invoker.VehicleCommandInvoker;
-import Tasca1.n1exercici3.vehicle.*;
+import Tasca1.n3exercici1.commands.AccelarateVehicleCommand;
+import Tasca1.n3exercici1.commands.BrakeVehicleCommand;
+import Tasca1.n3exercici1.commands.StartVehicleCommand;
+import Tasca1.n3exercici1.invoker.VehicleCommandInvoker;
+import Tasca1.n3exercici1.vehicle.*;
 
 public class Parking {
     public void initializeParking() {

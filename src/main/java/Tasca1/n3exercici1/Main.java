@@ -1,4 +1,4 @@
-package Tasca1.n1exercici3;
+package Tasca1.n3exercici1;
 
 public class Main {
     public static void main(String[] args) {
