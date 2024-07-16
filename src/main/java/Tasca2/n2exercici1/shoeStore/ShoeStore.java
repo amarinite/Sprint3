@@ -1,6 +1,9 @@
 package Tasca2.n2exercici1.shoeStore;
 
+import Tasca2.n2exercici1.payment.PaymentCreditCard;
 import Tasca2.n2exercici1.payment.PaymentGateway;
+import Tasca2.n2exercici1.payment.PaymentMethod;
+import Tasca2.n2exercici1.payment.PaymentPaypal;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,6 +12,8 @@ public class ShoeStore {
 
     private final Scanner scanner = new Scanner(System.in);
     private PaymentGateway paymentGateway = new PaymentGateway();
+    private PaymentMethod cardPay = new PaymentCreditCard();
+    private PaymentMethod paypalPay = new PaymentPaypal();
     public void makePurchase(ArrayList<Shoe> shoes) {
         int option = choosePayment();
 
@@ -24,11 +29,11 @@ public class ShoeStore {
 
     // FIX
     private void payWithCreditCard(ArrayList<Shoe> shoes) {
-        paymentGateway.processPayment(null, calculateAmount(shoes));
+        paymentGateway.processPayment(cardPay, calculateAmount(shoes));
     }
 
     private void payWithPaypal(ArrayList<Shoe> shoes) {
-        paymentGateway.processPayment(null, calculateAmount(shoes));
+        paymentGateway.processPayment(paypalPay, calculateAmount(shoes));
     }
 
     private int choosePayment() {
