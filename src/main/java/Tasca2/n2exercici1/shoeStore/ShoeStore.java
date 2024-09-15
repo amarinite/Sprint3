@@ -17,17 +17,19 @@ public class ShoeStore {
     public void makePurchase(ArrayList<Shoe> shoes) {
         int option = choosePayment();
 
-        if (option == 1) {
-            payWithCreditCard(shoes);
-        } else if (option == 2) {
-            payWithPaypal(shoes);
-        } else {
-            System.out.println("Please choose a valid number.");
-            makePurchase(shoes);
+        switch (option) {
+            case 1:
+                payWithCreditCard(shoes);
+                break;
+            case 2:
+                payWithPaypal(shoes);
+                break;
+            default:
+                System.out.println("Please choose a valid number.");
+                makePurchase(shoes);
         }
     }
 
-    // FIX
     private void payWithCreditCard(ArrayList<Shoe> shoes) {
         paymentGateway.processPayment(cardPay, calculateAmount(shoes));
     }
@@ -46,7 +48,6 @@ public class ShoeStore {
     }
 
     private double calculateAmount(ArrayList<Shoe> shoes) {
-        // double totalAmount = shoes.stream().reduce(0, Double::sum);     map
         double totalAmount = 0d;
 
         for (Shoe shoe : shoes) {

@@ -7,5 +7,5 @@ import java.util.Map;
 public interface StockAgentObservable {
     void attach(StockAgencyObserver o);
     void detach(StockAgencyObserver o);
-    void notifyObservers(Map<String, Double> stockInfo);
+    void notifyObservers();
 }

@@ -11,11 +11,11 @@ public class StockExchange  {
     public void operateStock() {
         StockAgent agent = new StockAgent();
 
-        Map<String, Double> stock = Map.of(
+        Map<String, Double> stock = new HashMap<>(Map.of(
                 "BBVA", 9.796d,
                 "Endesa", 18.165d,
                 "Indra", 19.170d,
-                "Repsol", 13.635d);
+                "Repsol", 13.635d));
 
         StockAgency agencyRed = new StockAgency("Red");
         StockAgency agencyBlue = new StockAgency("Blue");
@@ -33,6 +33,5 @@ public class StockExchange  {
         agent.setStockInfo(stock);
     }
 
-    private void updateStock() {}
 
 }

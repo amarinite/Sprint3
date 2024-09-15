@@ -17,7 +17,7 @@ public class StockAgent implements StockAgentObservable {
 
     public void setStockInfo(Map<String, Double> stockInfo) {
         this.stockInfo = stockInfo;
-        notifyObservers(stockInfo);
+        notifyObservers();
     }
 
     @Override
@@ -31,7 +31,7 @@ public class StockAgent implements StockAgentObservable {
     }
 
     @Override
-    public void notifyObservers(Map<String, Double> stockInfo) {
+    public void notifyObservers() {
         for (StockAgencyObserver o : observers) {
             o.update(stockInfo);
         }
